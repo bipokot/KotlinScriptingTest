@@ -1,0 +1,23 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def kotlinVersion = "1.7.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "junit:junit:4.12"
+
+    // comment these lines to eliminate an error
+    implementation "com.github.tschuchortdev:kotlin-compile-testing:1.4.9" // compatible with 1.7.0
+    implementation "com.github.tschuchortdev:kotlin-compile-testing-ksp:1.4.9"
+
+    implementation "org.jetbrains.kotlin:kotlin-scripting-jsr223:$kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-compiler-embeddable:$kotlinVersion"
+}
